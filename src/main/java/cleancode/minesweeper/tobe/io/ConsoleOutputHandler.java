@@ -44,6 +44,7 @@ public class ConsoleOutputHandler {
     }
 
     public void printCommentForSelectingCell() {
+        System.out.println();
         System.out.println("선택할 좌표를 입력하세요. (예: a1)");
     }
 
