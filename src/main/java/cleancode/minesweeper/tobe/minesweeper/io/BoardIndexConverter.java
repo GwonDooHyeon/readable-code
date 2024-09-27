@@ -1,6 +1,6 @@
-package cleancode.minesweeper.tobe.io;
+package cleancode.minesweeper.tobe.minesweeper.io;
 
-import cleancode.minesweeper.tobe.exception.GameException;
+import cleancode.minesweeper.tobe.minesweeper.exception.GameException;
 
 public class BoardIndexConverter {
 

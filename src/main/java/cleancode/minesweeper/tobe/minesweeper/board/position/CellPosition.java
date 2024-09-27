@@ -1,4 +1,4 @@
-package cleancode.minesweeper.tobe.board.position;
+package cleancode.minesweeper.tobe.minesweeper.board.position;
 
 import java.util.Objects;
 

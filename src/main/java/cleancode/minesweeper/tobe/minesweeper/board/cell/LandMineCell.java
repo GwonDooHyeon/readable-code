@@ -1,4 +1,4 @@
-package cleancode.minesweeper.tobe.board.cell;
+package cleancode.minesweeper.tobe.minesweeper.board.cell;
 
 public class LandMineCell implements Cell {
 
@@ -38,7 +38,7 @@ public class LandMineCell implements Cell {
 
     @Override
     public boolean isChecked() {
-        return cellState.isChecked();
+        return cellState.isFlagged();
     }
 
     @Override

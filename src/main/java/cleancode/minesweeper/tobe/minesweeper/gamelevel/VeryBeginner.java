@@ -1,9 +1,10 @@
-package cleancode.minesweeper.tobe.gamelevel;
+package cleancode.minesweeper.tobe.minesweeper.gamelevel;
 
 /**
  * 초보자 레벨
  */
 public class VeryBeginner implements GameLevel {
+
     @Override
     public int getRowSize() {
         return 4;

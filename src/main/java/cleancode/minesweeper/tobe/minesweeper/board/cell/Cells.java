@@ -1,4 +1,4 @@
-package cleancode.minesweeper.tobe.board.cell;
+package cleancode.minesweeper.tobe.minesweeper.board.cell;
 
 import java.util.Arrays;
 import java.util.List;

@@ -1,7 +1,7 @@
-package cleancode.minesweeper.tobe.io.sign;
+package cleancode.minesweeper.tobe.minesweeper.io.sign;
 
-import cleancode.minesweeper.tobe.board.cell.CellSnapshot;
-import cleancode.minesweeper.tobe.board.cell.CellSnapshotStatus;
+import cleancode.minesweeper.tobe.minesweeper.board.cell.CellSnapshot;
+import cleancode.minesweeper.tobe.minesweeper.board.cell.CellSnapshotStatus;
 
 public class LandMineCellSignProvider implements CellSignProvidable {
 

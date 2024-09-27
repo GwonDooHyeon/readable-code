@@ -1,9 +1,10 @@
-package cleancode.minesweeper.tobe.gamelevel;
+package cleancode.minesweeper.tobe.minesweeper.gamelevel;
 
 /**
  * 중간 레벨
  */
 public class Middle implements GameLevel {
+
     @Override
     public int getRowSize() {
         return 14;

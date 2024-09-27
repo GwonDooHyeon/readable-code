@@ -1,4 +1,4 @@
-package cleancode.minesweeper.tobe.board.cell;
+package cleancode.minesweeper.tobe.minesweeper.board.cell;
 
 public enum CellSnapshotStatus {
     EMPTY("빈 셀"),

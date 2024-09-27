@@ -1,16 +1,17 @@
-package cleancode.minesweeper.tobe.board;
+package cleancode.minesweeper.tobe.minesweeper.board;
 
-import cleancode.minesweeper.tobe.board.cell.Cell;
-import cleancode.minesweeper.tobe.board.cell.CellSnapshot;
-import cleancode.minesweeper.tobe.board.cell.Cells;
-import cleancode.minesweeper.tobe.board.cell.EmptyCell;
-import cleancode.minesweeper.tobe.board.cell.LandMineCell;
-import cleancode.minesweeper.tobe.board.cell.NumberCell;
-import cleancode.minesweeper.tobe.board.position.CellPosition;
-import cleancode.minesweeper.tobe.board.position.CellPositions;
-import cleancode.minesweeper.tobe.board.position.RelativePosition;
-import cleancode.minesweeper.tobe.gamelevel.GameLevel;
+import cleancode.minesweeper.tobe.minesweeper.board.cell.Cell;
+import cleancode.minesweeper.tobe.minesweeper.board.cell.CellSnapshot;
+import cleancode.minesweeper.tobe.minesweeper.board.cell.Cells;
+import cleancode.minesweeper.tobe.minesweeper.board.cell.EmptyCell;
+import cleancode.minesweeper.tobe.minesweeper.board.cell.LandMineCell;
+import cleancode.minesweeper.tobe.minesweeper.board.cell.NumberCell;
+import cleancode.minesweeper.tobe.minesweeper.board.position.CellPosition;
+import cleancode.minesweeper.tobe.minesweeper.board.position.CellPositions;
+import cleancode.minesweeper.tobe.minesweeper.board.position.RelativePosition;
+import cleancode.minesweeper.tobe.minesweeper.gamelevel.GameLevel;
 import java.util.List;
+import java.util.Stack;
 
 public class GameBoard {
 
@@ -47,7 +48,8 @@ public class GameBoard {
             return;
         }
 
-        openSurroundedCells(cellPosition);
+//        openSurroundedCells(cellPosition);
+        openSurroundedCells2(cellPosition);
         checkGameIsOver();
     }
 
@@ -114,6 +116,40 @@ public class GameBoard {
                 getRowSize(), getColSize()
         );
         surroundedPositions.forEach(this::openSurroundedCells);
+    }
+
+    private void openSurroundedCells2(CellPosition cellPosition) {
+        Stack<CellPosition> stack = new Stack<>();
+        stack.push(cellPosition);
+
+        while (!stack.isEmpty()) {
+            openAndPushCellAt(stack);
+        }
+
+    }
+
+    private void openAndPushCellAt(Stack<CellPosition> stack) {
+        CellPosition currentCellPosition = stack.pop();
+        if (isOpenedCell(currentCellPosition)) {
+            return;
+        }
+        if (isLandMineCellAt(currentCellPosition)) {
+            return;
+        }
+
+        openOneCellAt(currentCellPosition);
+
+        if (doesCellHaveLandMineCount(currentCellPosition)) {
+            return;
+        }
+
+        List<CellPosition> surroundedPositions = calculateSurroundedPositions(
+                currentCellPosition,
+                getRowSize(), getColSize()
+        );
+        for (CellPosition surroundedPosition : surroundedPositions) {
+            stack.push(surroundedPosition);
+        }
     }
 
     private void initializeGameStatus() {

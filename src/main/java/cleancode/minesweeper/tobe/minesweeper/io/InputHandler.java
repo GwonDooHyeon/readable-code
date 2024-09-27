@@ -1,7 +1,7 @@
-package cleancode.minesweeper.tobe.io;
+package cleancode.minesweeper.tobe.minesweeper.io;
 
-import cleancode.minesweeper.tobe.board.position.CellPosition;
-import cleancode.minesweeper.tobe.user.UserAction;
+import cleancode.minesweeper.tobe.minesweeper.board.position.CellPosition;
+import cleancode.minesweeper.tobe.minesweeper.user.UserAction;
 
 public interface InputHandler {
 

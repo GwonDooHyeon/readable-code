@@ -1,4 +1,4 @@
-package cleancode.minesweeper.tobe.exception;
+package cleancode.minesweeper.tobe.minesweeper.exception;
 
 public class GameException extends RuntimeException {
 

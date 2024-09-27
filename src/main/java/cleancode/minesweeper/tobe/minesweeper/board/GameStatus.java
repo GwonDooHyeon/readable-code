@@ -1,4 +1,4 @@
-package cleancode.minesweeper.tobe.board;
+package cleancode.minesweeper.tobe.minesweeper.board;
 
 public enum GameStatus {
 

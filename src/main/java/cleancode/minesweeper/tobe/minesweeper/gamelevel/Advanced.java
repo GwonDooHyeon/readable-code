@@ -1,10 +1,10 @@
-package cleancode.minesweeper.tobe.gamelevel;
+package cleancode.minesweeper.tobe.minesweeper.gamelevel;
 
 /**
  * 고급 레벨
  */
 public class Advanced implements GameLevel {
-    
+
     @Override
     public int getRowSize() {
         return 20;

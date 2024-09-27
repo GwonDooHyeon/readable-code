@@ -1,8 +1,8 @@
-package cleancode.minesweeper.tobe.config;
+package cleancode.minesweeper.tobe.minesweeper.config;
 
-import cleancode.minesweeper.tobe.gamelevel.GameLevel;
-import cleancode.minesweeper.tobe.io.InputHandler;
-import cleancode.minesweeper.tobe.io.OutputHandler;
+import cleancode.minesweeper.tobe.minesweeper.gamelevel.GameLevel;
+import cleancode.minesweeper.tobe.minesweeper.io.InputHandler;
+import cleancode.minesweeper.tobe.minesweeper.io.OutputHandler;
 
 public class GameConfig {
 
@@ -27,5 +27,5 @@ public class GameConfig {
     public OutputHandler getOutputHandler() {
         return outputHandler;
     }
-    
+
 }

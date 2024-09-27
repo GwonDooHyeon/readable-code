@@ -1,4 +1,4 @@
-package cleancode.minesweeper.tobe.gamelevel;
+package cleancode.minesweeper.tobe.minesweeper.gamelevel;
 
 /**
  * 초급 레벨
