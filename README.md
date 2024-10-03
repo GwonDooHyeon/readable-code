@@ -1,1 +1,1 @@
-# Readable Code
+# 박우빈님의 Readable Code: 읽기 좋은 코드 강의를 들으며 작성한 코드입니다.
